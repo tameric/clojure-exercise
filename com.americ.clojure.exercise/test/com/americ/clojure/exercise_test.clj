@@ -4,4 +4,11 @@
 
 (deftest a-test
   (testing "FIXME, I fail."
-    (is (= 0 1))))
+    (is (= 1 1))))
+
+(deftest average-test
+  (is (= (average '(1 2 3)) (double 2)))
+  (is (thrown? clojure.lang.ArityException (average))))
+
+(deftest map-average-test
+  (is (= (map-average [1 2] [4 5 6]) [1.5 5.0])))
