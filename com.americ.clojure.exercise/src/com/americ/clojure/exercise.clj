@@ -6,8 +6,8 @@
   (println x "Hello, World!"))
 
 (defn average
-  [params]
-  (/ (double (reduce + params)) (count params)))
+  [lst]
+  (/ (double (reduce + lst)) (count lst)))
     
 (defn map-average
   [& lst]
