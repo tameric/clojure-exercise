@@ -23,6 +23,10 @@
      (recur (inc i) (conj ma (average (take i lst))))
       ma)))
             
-  
+(defn map-moving-average
+  [& lst]
+  (if (empty? lst)
+    (throw (new clojure.lang.ArityException (count lst) "map-moving-average"))
+    (map moving-average lst)))
   
   

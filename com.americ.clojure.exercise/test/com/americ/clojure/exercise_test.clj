@@ -18,3 +18,6 @@
   (is (= (moving-average [1 2]) [1.0 1.5]))
   (is (thrown? clojure.lang.ArityException (moving-average))))
 
+(deftest map-moving-average-test
+  (is (= (map-moving-average [1 2] [4 5 6]) '([1.0 1.5] [4.0 4.5 5.0])))
+  (is (thrown? clojure.lang.ArityException (map-average))))
