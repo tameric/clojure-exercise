@@ -28,3 +28,5 @@
   (if (empty? lst)
     (throw (new clojure.lang.ArityException (count lst) "map-moving-average"))
     (map moving-average lst)))
+
+(println "test")
