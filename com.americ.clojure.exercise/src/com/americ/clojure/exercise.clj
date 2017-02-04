@@ -6,8 +6,8 @@
   (println x "Hello, World!"))
 
 (defn average
-  [lst]
-  (/ (double (reduce + lst)) (count lst)))
+  [params]
+  (/ (double (reduce + params)) (count params)))
     
 (defn map-average
   [& lst]
@@ -28,5 +28,3 @@
   (if (empty? lst)
     (throw (new clojure.lang.ArityException (count lst) "map-moving-average"))
     (map moving-average lst)))
-  
-  
